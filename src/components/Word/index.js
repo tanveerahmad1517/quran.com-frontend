@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import bindTooltip from 'utils/bindTooltip';
-import { zeroPad } from 'helpers/StringHelpers';
+import zeroPad from 'helpers/StringHelpers';
 
 /* eslint-disable no-unused-vars */
 const CHAR_TYPE_WORD = 'word';
