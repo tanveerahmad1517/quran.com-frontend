@@ -19,7 +19,7 @@ export default () => (
             working hard on their spare time to keep this project as beneficial and useful
             to people all around the world.
           </p>
-          <h3>How you can help.</h3>
+          <h3>How you can help</h3>
           <p>
             Quran.com has an incredible amount of potential from a product standpoint
             and a team standpoint. We need to continue innovating the product and the
@@ -38,7 +38,7 @@ export default () => (
               by making beautiful products).
             </li>
           </ul>
-          <h3>Make a difference.</h3>
+          <h3>Make a difference</h3>
           <p>
             Making a difference for Quran.com is as simple as a Tweet, Facebook share or
             emailing us feedback. For those looking to make a stronger impact, support us by
