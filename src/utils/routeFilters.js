@@ -9,7 +9,7 @@ function replaceChapterOrRange(params) {
 }
 
 function filterValidChapter(replaceState, chapterId) {
-  if (isNaN(chapterId) || chapterId > 114 || chapterId < 1) {
+  if (isNaN(chapterId) || chapterId < 1 || chapterId > 114) {
     replaceState('/error/invalid-surah');
   }
 }
