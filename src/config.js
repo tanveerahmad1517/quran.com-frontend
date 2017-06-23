@@ -9,6 +9,25 @@ const environment = {
 
 const title = "Al-Qur'an al-Kareem - القرآن الكريم";
 const description = 'The Quran translated into many languages in a simple and easy interface.';
+const keywords = [
+  'القران الكريم',
+  'قران كريم',
+  'القرآن',
+  'قران',
+  'quran',
+  'qur\'an',
+  'koran',
+  'kareem',
+  'surah',
+  'yasin',
+  'yaseen',
+  'kahf',
+  'mulk',
+  'rahman',
+  'muslim',
+  'islam',
+  'Allah'
+];
 const locales = {
   en: 'English',
   ar: 'العربية',
@@ -27,7 +46,6 @@ const config = {
   sentryClient: process.env.SENTRY_KEY_CLIENT,
   sentryServer: process.env.SENTRY_KEY_SERVER,
   facebookAppId: process.env.FACEBOOK_APP_ID,
-  // Supported locales
   locales,
   defaultLocale: 'en',
   app: {
@@ -51,8 +69,8 @@ const config = {
         },
         {
           name: 'keywords',
-          content: "quran, koran, qur'an, kareem, قران, القرآن, قران كريم, القران الكريم, surah, yasin, yaseen, kahf, mulk, rahman, muslim, islam, Allah"
-        }, // eslint-disable-line max-len
+          content: keywords.join(', ')
+        },
         {
           name: 'Charset',
           content: 'UTF-8'
@@ -191,7 +209,10 @@ const config = {
         }
       ],
       link: [
-        { rel: 'manifest', href: 'manifest.json' },
+        {
+          rel: 'manifest',
+          href: 'manifest.json'
+        },
         {
           rel: 'search',
           type: 'application/opensearchdescription+xml',
