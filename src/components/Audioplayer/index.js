@@ -142,13 +142,6 @@ export class Audioplayer extends Component {
     return false;
   }
 
-  getPrevious() {
-    const { currentVerse, verseIds } = this.props;
-    const index = verseIds.findIndex(id => id === currentVerse.verseKey);
-
-    return verseIds[index - 1];
-  }
-
   getNext() {
     const { currentVerse, chapter, onLoadAyahs, verseIds } = this.props;
     const ayahNum = currentVerse.verseKey.split(':')[1];
@@ -242,7 +235,9 @@ export class Audioplayer extends Component {
 
     if (repeat.from === repeat.to) {
       // user selected single ayah repeat
-      if (ayah !== repeat.from) return this.handleAyahChange();
+      if (ayah !== repeat.from) {
+        return this.handleAyahChange();
+      }
 
       if (repeat.times === 1) {
         // end of times
