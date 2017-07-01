@@ -50,9 +50,9 @@ const TopOptions = Loadable({
 });
 
 const title = 'Ayatul Kursi';
-const description = 'Ayatul Kursi is verse 255 of the second chapter in the ' +
-                    'Holy Quran, Surah al-Baqarah (The Chapter of the Cow). ' +
-                    'It is also known as the Throne Verse.';
+const description = 'Ayatul Kursi is verse 255 of the second chapter, ' +
+                    'Surah al-Baqarah (The Chapter of the Cow), in the ' +
+                    'Holy Quran. It is also known as the Throne Verse.';
 
 class AyatulKursi extends Component {
   state = {
