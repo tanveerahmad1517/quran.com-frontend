@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 export default () => (
   <div>
-    <Helmet title="About Qur&apos;an.com" />
+    <Helmet title="About Quran.com" />
     <IndexHeader noSearch />
     <div className="about-text container-fluid">
       <div className="row">
