@@ -32,62 +32,55 @@ class FontSizeOptions extends Component {
     });
   };
 
+  createFontSizeOption = (id, title, option, direction) => (
+    <ul className={styles.list}>
+      <li className={`text-center ${styles.item}`}>
+        <a
+          tabIndex="-1"
+          onClick={() => this.handleOptionSelected(option, +direction)}
+          className="pointer"
+        >
+          <i className="ss-icon ss-hyphen" />
+        </a>
+      </li>
+      <li className={`text-center ${styles.item}`}>
+        <LocaleFormattedMessage
+          id={id}
+          defaultMessage={title}
+        />
+      </li>
+      <li className={`text-center ${styles.item}`}>
+        <a
+          tabIndex="-1"
+          onClick={() => this.handleOptionSelected(option, -direction)}
+          className="pointer"
+        >
+          <i className="ss-icon ss-plus" />
+        </a>
+      </li>
+    </ul>
+  );
+
   renderOptions() {
     return (
       <div>
-        <ul className={styles.list}>
-          <li className={`text-center ${styles.item}`}>
-            <a
-              tabIndex="-1"
-              onClick={() => this.handleOptionSelected('arabic', -1)}
-              className="pointer"
-            >
-              <i className="ss-icon ss-hyphen" />
-            </a>
-          </li>
-          <li className={`text-center ${styles.item}`}>
-            <LocaleFormattedMessage
-              id="setting.fontSize.arabic"
-              defaultMessage="Arabic"
-            />
-          </li>
-          <li className={`text-center ${styles.item}`}>
-            <a
-              tabIndex="-1"
-              onClick={() => this.handleOptionSelected('arabic', 1)}
-              className="pointer"
-            >
-              <i className="ss-icon ss-plus" />
-            </a>
-          </li>
-        </ul>
+        {
+          this.createFontSizeOption(
+            'settings.fontSize.arabic',
+            'Arabic',
+            'arabic',
+            -1
+          )
+        }
         <br />
-        <ul className={styles.list}>
-          <li className={`text-center ${styles.item}`}>
-            <a
-              tabIndex="-1"
-              onClick={() => this.handleOptionSelected('translation', -1)}
-              className="pointer"
-            >
-              <i className="ss-icon ss-hyphen" />
-            </a>
-          </li>
-          <li className={`text-center ${styles.item}`}>
-            <LocaleFormattedMessage
-              id="setting.translations.title"
-              defaultMessage="Translations"
-            />
-          </li>
-          <li className={`text-center ${styles.item}`}>
-            <a
-              tabIndex="-1"
-              onClick={() => this.handleOptionSelected('translation', 1)}
-              className="pointer"
-            >
-              <i className="ss-icon ss-plus" />
-            </a>
-          </li>
-        </ul>
+        {
+          this.createFontSizeOption(
+            'settings.translations.title',
+            'Translations',
+            'translation',
+            -1
+          )
+        }
       </div>
     );
   }

@@ -242,7 +242,9 @@ export class Audioplayer extends Component {
 
     if (repeat.from === repeat.to) {
       // user selected single ayah repeat
-      if (ayah !== repeat.from) return this.handleAyahChange();
+      if (ayah !== repeat.from) {
+        return this.handleAyahChange();
+      }
 
       if (repeat.times === 1) {
         // end of times
