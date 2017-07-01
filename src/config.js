@@ -211,7 +211,7 @@ const config = {
       link: [
         {
           rel: 'manifest',
-          href: 'manifest.json'
+          href: '/manifest.json'
         },
         {
           rel: 'search',
@@ -254,7 +254,7 @@ const config = {
         },
         {
           rel: 'apple-touch-icon',
-          href: 'apple-touch-icon.png'
+          href: '/apple-touch-icon.png'
         },
         {
           rel: 'apple-touch-icon',
